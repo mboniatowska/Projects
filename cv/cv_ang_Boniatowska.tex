@@ -1,0 +1,106 @@
+%Martyna Boniatowska
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+\usepackage[sf]{titlesec}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancybox}
+\usepackage{enumitem}
+\usepackage{ifpdf}
+\usepackage{fontenc}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+\usepackage[dvipsnames]{xcolor}%niestandardowe kolory tekstu
+\usepackage{fontawesome5}%ikonki
+
+\newcommand*{\myfont}{\fontfamily{qag}\selectfont}
+\newenvironment{my}{\fontfamily{pbk}\selectfont}{\par}
+\titleformat{\section}         % Customise the \section command 
+  {\color{BrickRed}\Large\myfont\raggedright} % Make the \section headers large 
+                               % small capitals (\scshape) and left aligned (\raggedright)
+  {}{0em}                      % Can be used to give a prefix to all sections, like 'Section ...'
+  {\MakeUppercase}                           % Can be used to insert code before the heading
+  [\color{Gray}{\titlerule[1pt]}]                 % Inserts a horizontal line after the heading
+
+\titleformat{\subsection}
+  {\normalfont\scshape\raggedright}
+  {}{0em}
+  {}
+
+\newcommand{\datedsubsection}[2]{%
+  \subsection[#1]{#1 \hfill \normalfont{#2}}%
+}
+\newcommand{\kropki}[5]{\Large #1 $\bullet$ #2 $\bullet$ #3 $\bullet$ #4 $\bullet$ #5 $\bullet$}
+\newcommand{\br}{\color{BrickRed}}
+\newcommand{\g}{\color{gray}}
+\begin{document}
+\thispagestyle{empty} 
+\begin{minipage}{0.25\textwidth}
+\ifpdf
+\includegraphics[scale = 0.02]{zdj1.jpg}
+\else
+\includegraphics[scale = 0.02]{zdj_cv.eps}
+\fi
+\end{minipage}
+\begin{minipage}{0.75\textwidth}
+\vskip 15pt
+{\color{BrickRed}\huge\myfont Martyna Maria Boniatowska}\\[15pt]
+{\color{BrickRed}\large\myfont A graduate of Applied Mathematics}\\[15pt]
+\faIcon{home} :  \texttt{Wrocław} \\[10pt]
+\faIcon{phone-square-alt} :  \texttt{572 454 821}\\[10pt]
+\faIcon{envelope} : \texttt{mboniatowska380@gmail.com}\\[10pt]
+\faIcon{github} : \url{github.com/mboniatowska/Projects}
+\end{minipage}
+\newline
+\begin{my}
+\large{
+\section{Education}
+\datedsubsection{Wroclaw University of Technology}{10.2018 -- 02.2022}
+Applied Mathematics B.Sc.
+\begin{itemize}[label={}]
+    \item {\color{BrickRed}$\triangleright$} Thesis: Analysis of correlation, linear regression and logistic regression in sport research.
+\end{itemize}
+\datedsubsection{Wroclaw University of Technology}{02.2022 -- 06.2023}
+Applied Mathematics with specialization in Data Engineering M.Sc.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Experience}
+\datedsubsection{Marbet Lipsko}{03.2021 --- 04.2021}
+Student practice in the department of Computer Science and Data Analysis.
+\begin{itemize}[label={}]
+    \item {\color{BrickRed}$\triangleright$} Using SQL queries to create reports and analyzes.
+    \item {\color{BrickRed}$\triangleright$} Organizing documentation.
+
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Hard Skills}
+\begin{tabular}{p{2.5cm} c p{4cm} p{2.5cm} c}
+Python & \kropki{\br}{\br}{\br}{\g}{\g} &  &
+LaTeX & \kropki{\br}{\br}{\br}{\br}{\g}\\
+Matlab & \kropki{\br}{\br}{\br}{\br}{\g} &  & 
+Excel &\kropki{\br}{\br}{\br}{\g}{\g}\\
+SQL  &\kropki{\br}{\br}{\br}{\g}{\g}   & &
+MS Office &\kropki{\br}{\br}{\br}{\br}{\g}
+\end{tabular}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Soft Skills}
+{\ovalbox{\color{BrickRed} Data visualization}  \ovalbox{\color{BrickRed} Presentation skills} \ovalbox{\color{BrickRed} Problem solving skills} \ovalbox{\color{BrickRed} Time management} \ovalbox{\color{BrickRed} Creativity}\\[5pt] \ovalbox{\color{BrickRed} Critical thinking} \ovalbox{\color{BrickRed} Interpersonal skills} \ovalbox{\color{BrickRed} Responsibility}
+\ovalbox{\color{BrickRed} Attention to detail} \ovalbox{\color{BrickRed} Teamwork}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Languages}
+\begin{tabular}{p{2.5cm} c p{4cm} p{2.5cm} c}
+English & \kropki{\br}{\br}{\br}{\br}{\g} &  &
+\end{tabular}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+}
+\end{my}
+
+\end{document}

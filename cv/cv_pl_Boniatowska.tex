@@ -1,0 +1,106 @@
+%Martyna Boniatowska
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+\usepackage[sf]{titlesec}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancybox}
+\usepackage{enumitem}
+\usepackage{ifpdf}
+\usepackage{fontenc}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+\usepackage[dvipsnames]{xcolor}%niestandardowe kolory tekstu
+\usepackage{fontawesome5}%ikonki
+
+\newcommand*{\myfont}{\fontfamily{qag}\selectfont}
+\newenvironment{my}{\fontfamily{pbk}\selectfont}{\par}
+\titleformat{\section}         % Customise the \section command 
+  {\color{BrickRed}\Large\myfont\raggedright} % Make the \section headers large 
+                               % small capitals (\scshape) and left aligned (\raggedright)
+  {}{0em}                      % Can be used to give a prefix to all sections, like 'Section ...'
+  {\MakeUppercase}                           % Can be used to insert code before the heading
+  [\color{Gray}{\titlerule[1pt]}]                 % Inserts a horizontal line after the heading
+
+\titleformat{\subsection}
+  {\normalfont\scshape\raggedright}
+  {}{0em}
+  {}
+
+\newcommand{\datedsubsection}[2]{%
+  \subsection[#1]{#1 \hfill \normalfont{#2}}%
+}
+\newcommand{\kropki}[5]{\Large #1 $\bullet$ #2 $\bullet$ #3 $\bullet$ #4 $\bullet$ #5 $\bullet$}
+\newcommand{\br}{\color{BrickRed}}
+\newcommand{\g}{\color{gray}}
+\begin{document}
+\thispagestyle{empty} 
+\begin{minipage}{0.25\textwidth}
+\ifpdf
+\includegraphics[scale = 0.02]{zdj1.jpg}
+\else
+\includegraphics[scale = 0.02]{zdj_cv.eps}
+\fi
+\end{minipage}
+\begin{minipage}{0.75\textwidth}
+\vskip 15pt
+{\color{BrickRed}\huge\myfont Martyna Maria Boniatowska}\\[15pt]
+{\color{BrickRed}\large\myfont Absolwentka Matematyki Stosowanej}\\[15pt]
+\faIcon{home} :  \texttt{Wrocław} \\[10pt]
+\faIcon{phone-square-alt} :  \texttt{572 454 821}\\[10pt]
+\faIcon{envelope} : \texttt{mboniatowska380@gmail.com}\\[10pt]
+\faIcon{github} : \url{github.com/mboniatowska/Projects}
+\end{minipage}
+\newline
+\begin{my}
+\large{
+\section{Edukacja}
+\datedsubsection{Politechnika Wrocławska}{10.2018 -- 02.2022}
+Matematyka Stosowana -- studia inżynierskie.
+\begin{itemize}[label={}]
+    \item {\color{BrickRed}$\triangleright$} Temat pracy dyplomowej: Analiza korelacji, regresja liniowa i regresja logistyczna w badaniach sportowych.
+\end{itemize}
+\datedsubsection{Politechnika Wrocławska}{02.2022 -- 06.2023}
+Applied Mathematics with specialization in Data Engineering -- studia magisterskie.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Doświadczenie}
+\datedsubsection{Marbet Lipsko}{03.2021 --- 04.2021}
+Praktyka studencka w dziale informatyki i analizy danych.
+\begin{itemize}[label={}]
+    \item {\color{BrickRed}$\triangleright$} Wykorzystanie SQL'a do tworzenia raportów i przeprowadzania analiz.
+    \item {\color{BrickRed}$\triangleright$} Porządkowanie dokumentacji.
+
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Oprogramowanie}
+\begin{tabular}{p{2.5cm} c p{4cm} p{2.5cm} c}
+Python & \kropki{\br}{\br}{\br}{\g}{\g} &  &
+LaTeX & \kropki{\br}{\br}{\br}{\br}{\g}\\
+Matlab & \kropki{\br}{\br}{\br}{\br}{\g} &  & 
+Excel &\kropki{\br}{\br}{\br}{\g}{\g}\\
+SQL  &\kropki{\br}{\br}{\br}{\g}{\g}   & &
+MS Office &\kropki{\br}{\br}{\br}{\br}{\g}
+\end{tabular}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Umiejętności miękkie}
+{\ovalbox{\color{BrickRed} Wizualizacja danych}  \ovalbox{\color{BrickRed} Umiejętność prezentacji} \ovalbox{\color{BrickRed} Zdolność rozwiązywania problemów}\\[5pt] \ovalbox{\color{BrickRed} Zarządzanie czasem} \ovalbox{\color{BrickRed} Kreatywność} \ovalbox{\color{BrickRed} Zdolności interpersonalne} \ovalbox{\color{BrickRed} Odpowiedzialność}\\[5pt]
+\ovalbox{\color{BrickRed} Dbałość o szczegóły} \ovalbox{\color{BrickRed} Praca zespołowa}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Języki obce}
+\begin{tabular}{p{2.5cm} c p{4cm} p{2.5cm} c}
+Angielski & \kropki{\br}{\br}{\br}{\br}{\g} &  &
+\end{tabular}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+}
+\end{my}
+
+\end{document}
